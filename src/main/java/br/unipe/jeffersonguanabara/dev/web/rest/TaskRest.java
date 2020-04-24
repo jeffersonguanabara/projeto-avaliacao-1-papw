@@ -1,5 +1,6 @@
 package br.unipe.jeffersonguanabara.dev.web.rest;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.unipe.jeffersonguanabara.dev.web.domain.Task;
 import br.unipe.jeffersonguanabara.dev.web.service.TaskService;
+import br.unipe.jeffersonguanabara.dev.web.service.dto.TaskDatesDTO;
+import br.unipe.jeffersonguanabara.dev.web.service.dto.TaskDatesStatusDTO;
 
 @RestController
 @RequestMapping("/jeffersonguanabara/api")
@@ -60,5 +63,25 @@ public class TaskRest {
 	@PostMapping("task/update")
 	public ResponseEntity<Task> update(@RequestBody @Validated Task task) {
 		return ResponseEntity.ok(taskService.update(task));
+	}
+	
+	@PostMapping("task/dates")
+	public ResponseEntity<List<Task>> findByDateBetween(@RequestBody @Validated TaskDatesDTO taskDates) {
+		return ResponseEntity.ok().body(taskService.findByDateBetween(taskDates));
+	}
+	
+	@PostMapping("task/dates/status")
+	public ResponseEntity<List<Task>> findByStatusAndDateBetween(@RequestBody @Validated TaskDatesStatusDTO taskDatesStatus) {
+		return ResponseEntity.ok().body(taskService.findByStatusDateBetween(taskDatesStatus));
+	}
+	
+	@PostMapping("task/dates/{status}")
+	public ResponseEntity<List<Task>> findByStatusAndDateBetween(@PathVariable @Validated Long status, @RequestBody @Validated TaskDatesDTO taskDates) {
+		return ResponseEntity.ok().body(taskService.findByStatusDateBetween(status, taskDates));
+	}
+	
+	@PostMapping("task/{status}/{dateOne}/{dateTwo}")
+	public ResponseEntity<List<Task>> findByStatusAndDateBetween(@PathVariable @Validated Long status, LocalDate dateOne, LocalDate dateTwo) {
+		return ResponseEntity.ok().body(taskService.findByStatusDateBetween(status, dateOne, dateTwo));
 	}
 }
