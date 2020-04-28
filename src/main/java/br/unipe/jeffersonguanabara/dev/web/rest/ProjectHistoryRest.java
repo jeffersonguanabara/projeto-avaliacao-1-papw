@@ -8,6 +8,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,18 +23,18 @@ public class ProjectHistoryRest {
 	@Autowired
 	private ProjectHistoryService projectHistoryService;
 	
-	@GetMapping("/projectHistory")
-	public ResponseEntity<ProjectHistory> save(ProjectHistory projectHistory){
+	@PostMapping("/projectHistory")
+	public ResponseEntity<ProjectHistory> saveProjectHistory(ProjectHistory projectHistory){
 		return ResponseEntity.ok(projectHistoryService.save(projectHistory));
 	}
 	
 	@GetMapping("projectHistory/list")
-	public ResponseEntity<List<ProjectHistory>> findAll() {
+	public ResponseEntity<List<ProjectHistory>> findAllProjectsHistory() {
 		return ResponseEntity.ok().body(projectHistoryService.findAll());
 	}
 	
 	@GetMapping("projectHistory/delete/{id}")
-	public ResponseEntity deleteById(@PathVariable @Validated Long id) {
+	public ResponseEntity deleteProjectHistoryById(@PathVariable @Validated Long id) {
 		try {
 			projectHistoryService.deleteById(id);
 			return ResponseEntity.ok().build();
@@ -43,7 +44,7 @@ public class ProjectHistoryRest {
 	}
 	
 	@PostMapping("projectHistory/delete")
-	public ResponseEntity deleteById(@RequestBody @Validated ProjectHistory projectHistory) {
+	public ResponseEntity deleteProjectHistory(@RequestBody @Validated ProjectHistory projectHistory) {
 		try {
 			projectHistoryService.delete(projectHistory);
 			return ResponseEntity.ok().build();
@@ -53,12 +54,12 @@ public class ProjectHistoryRest {
 	}
 	
 	@GetMapping("projectHistory/{id}")
-	public ResponseEntity<ProjectHistory> findById(@PathVariable @Validated Long id) {
+	public ResponseEntity<ProjectHistory> findProjectHistoryById(@PathVariable @Validated Long id) {
 		return ResponseEntity.ok(projectHistoryService.findById(id));
 	}
 	
-	@PostMapping("projectHistory/update")
-	public ResponseEntity<ProjectHistory> update(@RequestBody @Validated ProjectHistory projectHistory) {
+	@PutMapping("projectHistory/update")
+	public ResponseEntity<ProjectHistory> updateProjectHistory(@RequestBody @Validated ProjectHistory projectHistory) {
 		return ResponseEntity.ok(projectHistoryService.update(projectHistory));
 	}
 }

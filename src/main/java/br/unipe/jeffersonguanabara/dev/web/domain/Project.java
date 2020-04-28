@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Project {
@@ -12,6 +15,8 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String projectTitle;
+	@ManyToOne
+	@JoinColumn(name = "person_id")
 	private Person manager;
 	private Long minSalary;
 	private Long maxSalary;

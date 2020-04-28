@@ -11,7 +11,7 @@ public class Departament {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String departmentName;
+	private String departamentName;
 	
 	public Long getId() {
 		return id;
@@ -19,12 +19,10 @@ public class Departament {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getDepartmentName() {
-		return departmentName;
+	public String getDepartamentName() {
+		return departamentName;
 	}
-	public void setDepartmentName(String departmentName) {
-		this.departmentName = departmentName;
-	}
-	
-	
+	public void setDepartamentName(String departamentName) {
+		this.departamentName = departamentName;
+	}	
 }

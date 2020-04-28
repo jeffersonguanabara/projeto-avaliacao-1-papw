@@ -10,10 +10,10 @@ public class TaskDatesStatusDTO {
 	private LocalDate dataFim;
 	private Long status;
 	
-	public TaskDatesStatusDTO(Task task) {
-		setDataFim(task.getStartDate());
-		setDataFim(task.getEndDate());
-		setStatus(task.getStatus());
+	public TaskDatesStatusDTO(LocalDate dataInicio, LocalDate dataFim, Long status) {
+		this.dataInicio = dataInicio;
+		this.dataFim = dataFim;
+		this.status = status;
 	}
 	public LocalDate getDataInicio() {
 		return dataInicio;

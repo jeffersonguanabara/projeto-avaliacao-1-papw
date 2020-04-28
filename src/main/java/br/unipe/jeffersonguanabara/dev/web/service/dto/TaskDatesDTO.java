@@ -9,9 +9,9 @@ public class TaskDatesDTO {
 	private LocalDate dataInicio;
 	private LocalDate dataFim;
 	
-	public TaskDatesDTO(Task task) {
-		setDataInicio(task.getStartDate());
-		setDataFim(task.getEndDate());
+	public TaskDatesDTO(LocalDate dateOne, LocalDate dateTwo) {
+		this.dataInicio = dateOne;
+		this.dataFim = dateTwo;
 	}
 
 	public LocalDate getDataInicio() {

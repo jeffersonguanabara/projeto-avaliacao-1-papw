@@ -44,22 +44,22 @@ public class TaskService {
 	}
 
 	public List<Task> findByDateBetween(TaskDatesDTO taskDates) {
-		List<Task> tasks = taskReposiroty.findByDateBetween(taskDates.getDataInicio(), taskDates.getDataFim());
+		List<Task> tasks = taskReposiroty.findByDate(taskDates.getDataInicio(), taskDates.getDataFim());
 		return tasks;
 	}
 	
 	public List<Task> findByStatusDateBetween(TaskDatesStatusDTO taskStatusDates) {
-		List<Task> tasks = taskReposiroty.findByStatusAndDateBetween(taskStatusDates.getStatus(), taskStatusDates.getDataInicio(), taskStatusDates.getDataFim());
+		List<Task> tasks = taskReposiroty.findByStatusAndDate(taskStatusDates.getStatus(), taskStatusDates.getDataInicio(), taskStatusDates.getDataFim());
 		return tasks;
 	}
 	
-	public List<Task> findByStatusDateBetween(Long status,TaskDatesDTO taskDates) {
-		List<Task> tasks = taskReposiroty.findByStatusAndDateBetween(status, taskDates.getDataInicio(), taskDates.getDataFim());
-		return tasks;
-	}
+//	public List<Task> findByStatusDateBetween(Long status,TaskDatesDTO taskDates) {
+//		List<Task> tasks = taskReposiroty.findByStatusAndDate(status, taskDates.getDataInicio(), taskDates.getDataFim());
+//		return tasks;
+//	}
 	
 	public List<Task> findByStatusDateBetween(Long status, LocalDate dateOne, LocalDate dateTwo) {
-		List<Task> tasks = taskReposiroty.findByStatusAndDateBetween(status, dateOne, dateTwo);
+		List<Task> tasks = taskReposiroty.findByStatusAndDate(status, dateOne, dateTwo);
 		return tasks;
 	}
 }

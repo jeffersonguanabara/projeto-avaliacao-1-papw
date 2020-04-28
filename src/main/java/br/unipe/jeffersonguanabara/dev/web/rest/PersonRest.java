@@ -8,6 +8,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,18 +23,18 @@ public class PersonRest {
 	@Autowired
 	private PersonService personService;
 	
-	@GetMapping("/person")
-	public ResponseEntity<Person> save(Person person){
+	@PostMapping("/person")
+	public ResponseEntity<Person> savePerson(Person person){
 		return ResponseEntity.ok(personService.save(person));
 	}
 	
 	@GetMapping("person/list")
-	public ResponseEntity<List<Person>> findAll() {
+	public ResponseEntity<List<Person>> findAllPersons() {
 		return ResponseEntity.ok().body(personService.findAll());
 	}
 	
 	@GetMapping("person/delete/{id}")
-	public ResponseEntity deleteById(@PathVariable @Validated Long id) {
+	public ResponseEntity deletePersonById(@PathVariable @Validated Long id) {
 		try {
 			personService.deleteById(id);
 			return ResponseEntity.ok().build();
@@ -43,7 +44,7 @@ public class PersonRest {
 	}
 	
 	@PostMapping("person/delete")
-	public ResponseEntity deleteById(@RequestBody @Validated Person person) {
+	public ResponseEntity deletePerson(@RequestBody @Validated Person person) {
 		try {
 			personService.delete(person);
 			return ResponseEntity.ok().build();
@@ -53,12 +54,12 @@ public class PersonRest {
 	}
 	
 	@GetMapping("person/{id}")
-	public ResponseEntity<Person> findById(@PathVariable @Validated Long id) {
+	public ResponseEntity<Person> findPersonById(@PathVariable @Validated Long id) {
 		return ResponseEntity.ok(personService.findById(id));
 	}
 	
-	@PostMapping("person/update")
-	public ResponseEntity<Person> update(@RequestBody @Validated Person person) {
+	@PutMapping("person/update")
+	public ResponseEntity<Person> updatePerson(@RequestBody @Validated Person person) {
 		return ResponseEntity.ok(personService.update(person));
 	}
 }
