@@ -1,0 +1,922 @@
+{
+	"info": {
+		"_postman_id": "becfa860-d388-40c0-89a5-ea089b82d4e5",
+		"name": "Api Avaliação - Projeto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Departament",
+			"item": [
+				{
+					"name": "SalvarDepartament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"departamentName\": \"Ciências Socias\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/departament",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"departament"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarDepartament",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/departament/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"departament",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarDepartamentPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/departament/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"departament",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarDepartament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 2,\n\t\"departamentName\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/departament/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"departament",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarDepartamentPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/departament/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"departament",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarDepartament",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"departamentName\": \"Ciências Exatas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/departament/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"departament",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "SalvarPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Paulo\",\n\t\"lastName\": \"Guedes,\n\t\"email\": \"paulo.guedes@ministerioeconomia.gov.br\",\n\t\"phoneNumber\": \"(43)99999-1234\",\n\t\"hireDate\": \"2020-04-28\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPerson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/person/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"person",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarPersonPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/person/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"person",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"firstName\": null,\n    \"lastName\": null,\n    \"email\": null,\n    \"phoneNumber\": null,\n    \"hireDate\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/person/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"person",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPersonPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/person/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"person",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarPerson",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Paulo\",\n    \"lastName\": \"Guedes\",\n    \"email\": \"paulo.guedes@ministerioeconomia.gov.br\",\n    \"phoneNumber\": \"(43)99999-1234\",\n    \"hireDate\": \"2020-04-28\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/person/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"person",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "SalvarProject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"projectTitle\": \"IA em ação\",\n    \"manager\": 1,\n    \"minSalary\": 1000,\n    \"maxSalary\": 3000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/project",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/project/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"project",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarProjectPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/project/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"project",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarProject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 2,\n\t\"projectTitle\": null,\n    \"manager\": null,\n    \"minSalary\": null,\n    \"maxSalary\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/project/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"project",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProjectPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/project/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"project",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarProject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"projectTitle\": \"IA em ação\",\n    \"manager\": 1,\n    \"minSalary\": 1000,\n    \"maxSalary\": 3000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/project/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"project",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ProjectHistory",
+			"item": [
+				{
+					"name": "SalvarProjectHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startDate\": \"2020-01-01\",\n\t\"endDate\": \"2020-04-27\",\n\t\"manager\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/projectHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"projectHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarProjectHistoryPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/projectHistory/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"projectHistory",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProjectHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/projectHistory/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"projectHistory",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarProjectHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 2,\n\t\"startDate\": null,\n\t\"endDate\": null,\n\t\"manager\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/projectHistory/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"projectHistory",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProjectHistoryPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/projectHistory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"projectHistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarProjectHistory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"startDate\": \"2020-01-01\",\n\t\"endDate\": \"2020-04-27\",\n\t\"manager\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/projectHistory/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"projectHistory",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "SalvarTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Avaliacao-teste\",\n\t\"description\":\"Projeto de avaliação\",\n\t\"taskPoints\": 12,\n\t\"status\": 2,\n\t\"startDate\": \"2020-01-01\",\n\t\"endDate\": \"2020-04-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarTasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarTaskPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"title\": \"Avaliacao-teste\",\n    \"description\": \"Projeto de avaliação\",\n    \"taskPoints\": 12,\n    \"status\": 2,\n    \"startDate\": \"2020-01-01\",\n    \"endDate\": \"2020-04-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTaskPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarTask",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"title\": \"Avaliacao-teste\",\n    \"description\": \"Projeto de avaliação primeira note\",\n    \"taskPoints\": 12,\n    \"status\": 2,\n    \"startDate\": \"2020-01-30\",\n    \"endDate\": \"2020-04-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTaskPorDatasDeInicioFim_1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataInicio\": \"2020-01-01\",\n    \"dataFim\": \"2020-04-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTaskPorStarusEDatasDeInicioFim",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataInicio\": \"2020-01-01\",\n    \"dataFim\": \"2020-04-27\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/dates/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"dates",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTaskPorStatusEDatas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jeffersonguanabara/api/task/1/2020-01-01/2020-04-27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jeffersonguanabara",
+								"api",
+								"task",
+								"1",
+								"2020-01-01",
+								"2020-04-27"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
